@@ -1,0 +1,72 @@
+entity School{
+	schoolNam String,
+    schoolAddress String,
+    phoneNumber String,
+    email String
+}
+entity Teacher {
+	firstName String,
+    lastName String,
+    email String,
+    phoneNumber String,
+    hireDate Instant,
+    salaryRate Long,
+    title String,
+    trainTitle TrainTitle
+    
+}
+entity Semester{
+	semesterName String,
+    startDate Instant,
+    endDate Instant,
+    totalWeek Integer
+}
+entity Week{
+    weekName String
+}
+entity Subject{
+	subjectName String,
+    totalHours Integer,
+    
+}
+entity Lesson{
+    date Date,
+    ordinalNumber OrdinalNumber,
+    lessonTitle String
+}
+entity Room{
+    roomName String,
+    description String
+}
+entity ClassSchool{
+	className String,
+    description String
+}
+enum Date{
+	SUN,MON,TUE,WED,THU,FRI,SAT
+}
+enum TrainTitle{
+	UNI,COL
+}
+enum OrdinalNumber{
+	L1,L2,L3,L4,L5,L6,L7,L8
+}
+/**
+*relationship OneToOne{
+	
+*}*/
+relationship OneToMany{
+	School{teacher} to Teacher,
+    Semester{week} to Week,
+    Week{lesson} to Lesson,
+    Subject{lesson} to Lesson,
+    Teacher{lesson} to Lesson,
+    School{room} to Room,
+    Room{lesson} to Lesson,
+    ClassSchool{lesson} to Lesson
+}
+paginate Teacher,Subject,Semester,Week,Lesson,Room,School with pagination
+dto * with mapstruct
+
+// Set an angular suffix
+angularSuffix * with mySuffix

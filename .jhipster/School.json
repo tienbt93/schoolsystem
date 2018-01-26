@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "teacher",
+            "otherEntityName": "teacher",
+            "otherEntityRelationshipName": "school"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "room",
+            "otherEntityName": "room",
+            "otherEntityRelationshipName": "school"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "schoolNam",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "schoolAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180126161048",
+    "entityTableName": "school",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "schoolsystem"
+}

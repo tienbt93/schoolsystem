@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "week",
+            "otherEntityName": "week",
+            "otherEntityRelationshipName": "semester"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "semesterName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "totalWeek",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180126161050",
+    "entityTableName": "semester",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "schoolsystem"
+}
