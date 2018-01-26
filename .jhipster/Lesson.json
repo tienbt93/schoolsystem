@@ -1,0 +1,59 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "teacher",
+            "otherEntityName": "teacher",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "week",
+            "otherEntityName": "week",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "subject",
+            "otherEntityName": "subject",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "room",
+            "otherEntityName": "room",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "classSchool",
+            "otherEntityName": "classSchool",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Date",
+            "fieldValues": "SUN,MON,TUE,WED,THU,FRI,SAT"
+        },
+        {
+            "fieldName": "ordinalNumber",
+            "fieldType": "OrdinalNumber",
+            "fieldValues": "L1,L2,L3,L4,L5,L6,L7,L8"
+        },
+        {
+            "fieldName": "lessonTitle",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180126161053",
+    "entityTableName": "lesson",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "schoolsystem"
+}

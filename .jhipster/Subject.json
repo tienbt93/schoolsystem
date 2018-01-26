@@ -1,0 +1,29 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "lesson",
+            "otherEntityName": "lesson",
+            "otherEntityRelationshipName": "subject"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "subjectName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totalHours",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180126161052",
+    "entityTableName": "subject",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "mySuffix",
+    "microserviceName": "schoolsystem"
+}
